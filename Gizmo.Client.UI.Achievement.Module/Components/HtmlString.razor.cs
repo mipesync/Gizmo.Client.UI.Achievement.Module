@@ -1,12 +1,11 @@
 ﻿using System.Text.RegularExpressions;
-using Gizmo.Web.Components;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Logging;
 using Microsoft.JSInterop;
 
-namespace Gizmo.Client.UI.Tournament.Module.Components
+namespace Gizmo.Client.UI.Achievement.Module.Components
 {
-    public partial class HtmlString : CustomDOMComponentBase
+    public partial class HtmlString : ComponentBase
     {
         [Inject] IJSRuntime JsRuntime { get; set; }
         [Inject] ILogger<HtmlString> Logger { get; set; }

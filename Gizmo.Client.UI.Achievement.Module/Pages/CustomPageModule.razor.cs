@@ -3,13 +3,12 @@ using Gizmo.Web.Api.Models.Models.API.Request.CustomPage;
 using Gizmo.Web.Components;
 using Microsoft.AspNetCore.Components;
 
-namespace Gizmo.Client.UI.Tournament.Module.Pages
+namespace Gizmo.Client.UI.Achievement.Module.Pages
 {
-    [ModuleGuid("c8b74460-0799-4145-8f09-84471a9ade69")]
-    [PageUIModule(Title = "Tournaments", Description = "Tournaments page")]
+    [ModuleGuid(KnownModules.MODULE_ACHIEVEMENT)]
+    [PageUIModule(Title = "Achievements", Description = "Achievements page")]
     [ModuleDisplayOrder(int.MaxValue)]
-    [ModuleIcon("https://static/logo.svg")]
-    [Route("/tournaments")]
+    [Route("/achievements")]
     public partial class CustomPageModule : CustomDOMComponentBase
     {
         [Inject] 
@@ -24,7 +23,7 @@ namespace Gizmo.Client.UI.Tournament.Module.Pages
         {
             var pages = await GizmoClient.CustomPagesGetAsync();
         
-            Page = pages.FirstOrDefault(p => string.Equals("c8b74460-0799-4145-8f09-84471a9ade69", p.ModuleId.ToString().ToLower(), StringComparison.OrdinalIgnoreCase));
+            Page = pages.FirstOrDefault(p => string.Equals(KnownModules.MODULE_ACHIEVEMENT, p.ModuleId.ToString().ToLower(), StringComparison.OrdinalIgnoreCase));
         
             if (Page != null)
             {
