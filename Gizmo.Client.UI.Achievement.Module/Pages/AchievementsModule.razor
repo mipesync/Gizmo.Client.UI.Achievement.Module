@@ -1,7 +1,9 @@
 ﻿@namespace Gizmo.Client.UI.Achievement.Module.Pages
-@using Gizmo.Client.UI.Achievement.Module.Components
 @inherits Gizmo.Web.Components.CustomDOMComponentBase
 
 <div class="giz-app-details__app__navigation__label">
-    <HtmlString Content="@Page.Content"/>
+    @if (!string.IsNullOrEmpty(Content))
+    {
+        @((MarkupString)Content)
+    }
 </div>
